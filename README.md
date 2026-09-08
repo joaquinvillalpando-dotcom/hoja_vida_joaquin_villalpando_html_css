@@ -3,7 +3,6 @@
 Hoja de vida personal desarrollada como página web estática, utilizando **HTML5 semántico** para la estructura y **CSS3 puro** para el diseño visual. Proyecto realizado para la asignatura **Tecnologías Web I** (Universidad Católica Boliviana "San Pablo").
 
 **Ver la página en vivo:** https://joaquinvillalpando-dotcom.github.io/hoja_vida_joaquin_villalpando_html_css/
-*(el enlace funciona una vez que actives GitHub Pages en Settings → Pages)*
 
 ---
 
