@@ -1,0 +1,156 @@
+/* ============================================================
+   BASE.CSS
+   Reset global y tipografía base
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--crema);
+  color: var(--tinta);
+  font-family: var(--fuente);
+  font-size: var(--fs-base);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--turquesa);
+  color: var(--blanco);
+}
+
+/* Enlace "saltar al contenido": oculto hasta recibir foco */
+a[href="#contenido-principal"] {
+  position: absolute;
+  top: -3rem;
+  left: var(--e-4);
+  z-index: 200;
+  padding: var(--e-2) var(--e-5);
+  background: var(--tinta);
+  color: var(--crema);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radio-pill);
+  transition: top var(--rapida);
+}
+
+a[href="#contenido-principal"]:focus {
+  top: var(--e-4);
+}
+
+/* --- Encabezados: una sola familia, mucho peso --- */
+h1, h2, h3, h4 {
+  font-family: var(--fuente);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--tinta);
+  margin: 0 0 var(--e-4);
+}
+
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-md); color: var(--turquesa); }
+h4 { font-size: var(--fs-base); }
+
+p {
+  margin: 0 0 var(--e-4);
+  max-width: 66ch;
+  color: var(--tinta-suave);
+}
+
+strong { color: var(--tinta); }
+
+/* --- Enlaces --- */
+a {
+  color: var(--tinta);
+  text-decoration-color: var(--turquesa);
+  text-decoration-thickness: 2.5px;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color var(--rapida);
+}
+
+a:hover { color: var(--turquesa); }
+
+a[target="_blank"]::after {
+  content: " \2197";
+  font-size: 0.85em;
+}
+
+/* Foco visible consistente */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2.5px solid var(--coral);
+  outline-offset: 3px;
+  border-radius: var(--radio-sm);
+}
+
+/* --- Listas --- */
+ul, ol {
+  color: var(--tinta-suave);
+  padding-left: 1.25rem;
+}
+
+li { margin-bottom: var(--e-2); }
+
+/* --- Elementos de texto en línea --- */
+abbr {
+  text-decoration: underline dotted var(--tinta-tenue);
+  cursor: help;
+}
+
+dfn {
+  font-style: italic;
+  color: var(--turquesa);
+  font-weight: 600;
+}
+
+mark {
+  background: var(--coral-suave);
+  color: var(--tinta);
+  padding: 0.1em 0.5em;
+  border-radius: var(--radio-pill);
+  font-weight: 700;
+}
+
+time {
+  color: var(--tinta-tenue);
+  font-variant-numeric: tabular-nums;
+}
+
+address {
+  font-style: normal;
+}
+
+/* --- Multimedia --- */
+img, video, audio {
+  max-width: 100%;
+}
+
+figure { margin: 0; }
+
+/* --- Formularios (base) --- */
+input, textarea, button, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* --- Tablas --- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
